@@ -51,8 +51,10 @@ const App = () => {
 
       {/* render Preview component here */}
 
+      <div id="preview">
       <Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />
-    </div>
+    </div>    
+</div>
   );
 };
 
