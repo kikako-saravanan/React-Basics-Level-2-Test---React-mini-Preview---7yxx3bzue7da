@@ -17,44 +17,40 @@ const App = () => {
   };
   return (
     <div id="main">
-      <div>
-        {
-          <>
-            <label htmlFor="contentInput">Content: </label>
-            <input
-              type="text"
-              id="contentInput"
-              value={inp}
-              onChange={handleChange}
-            />
-            <br />
-            <br />
-            <label htmlFor="fontSizeInput">Font: </label>
-            <input
-              type="number"
-              id="fontSizeInput"
-              value={fon}
-              onChange={handleChange}
-            />
-            <br />
-            <br />
-            <label htmlFor="paddingInput">Padding: </label>
-            <input
-              type="number"
-              id="paddingInput"
-              value={padd}
-              onChange={handleChange}
-            />
-          </>
-        }
-      </div>
-
-      {/* render Preview component here */}
+      {
+        <>
+          <label htmlFor="contentInput">Content: </label>
+          <input
+            type="text"
+            id="contentInput"
+            value={inp}
+            onChange={handleChange}
+          />
+          <br />
+          <br />
+          <label htmlFor="fontSizeInput">Font: </label>
+          <input
+            type="number"
+            id="fontSizeInput"
+            value={fon}
+            onChange={handleChange}
+          />
+          <br />
+          <br />
+          <label htmlFor="paddingInput">Padding: </label>
+          <input
+            type="number"
+            id="paddingInput"
+            value={padd}
+            onChange={handleChange}
+          />
+        </>
+      }
 
       <div id="preview">
-      <Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />
-    </div>    
-</div>
+        {<Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />}
+      </div>
+    </div>
   );
 };
 
