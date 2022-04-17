@@ -7,6 +7,7 @@ const App = () => {
   const [padd, setPadd] = useState(5);
 
   const handleChange = (event) => {
+    event.preventDefault();
     if (event.target.id === "contentInput") {
       setInp(event.target.value);
     } else if (event.target.id === "fontSizeInput") {
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <div id="main">
       {
-        <>
+        <form>
           <label htmlFor="contentInput">Content: </label>
           <input
             type="text"
@@ -44,12 +45,9 @@ const App = () => {
             value={padd}
             onChange={handleChange}
           />
-        </>
+          <Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />
+        </form>
       }
-
-      <div id="preview">
-        {<Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />}
-      </div>
     </div>
   );
 };
