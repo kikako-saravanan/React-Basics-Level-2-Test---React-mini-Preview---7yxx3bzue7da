@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 import { Preview } from './Preview';
 const App = () => {
-  const [inp, setInp] = useState("hello world");
+  const [inp, setInp] = useState("hello newton");
   const [fon, setFon] = useState(10);
   const [padd, setPadd] = useState(5);
 
