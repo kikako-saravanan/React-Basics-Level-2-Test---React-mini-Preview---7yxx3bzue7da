@@ -16,41 +16,42 @@ const App = () => {
       setPadd(event.target.value);
     }
   };
+ 
   return (
     <div id="main">
-      {
-        <form>
-          <label htmlFor="contentInput">Content: </label>
-          <input
-            type="text"
-            id="contentInput"
-            value={inp}
-            onChange={handleChange}
-          />
-          <br />
-          <br />
-          <label htmlFor="fontSizeInput">Font: </label>
-          <input
-            type="number"
-            id="fontSizeInput"
-            value={fon}
-            onChange={handleChange}
-          />
-          <br />
-          <br />
-          <label htmlFor="paddingInput">Padding: </label>
-          <input
-            type="number"
-            id="paddingInput"
-            value={padd}
-            onChange={handleChange}
-          />
-          <Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />
-        </form>
-      }
+      <div>
+        
+          <form>
+            <label htmlFor="contentInput">Content: </label>
+            <input
+              type="text"
+              id="contentInput"
+              value={inp}
+              onChange={handleChange}
+            />
+            <br />
+            <br />
+            <label htmlFor="fontSizeInput">Font: </label>
+            <input
+              type="number"
+              id="fontSizeInput"
+              value={fon}
+              onChange={handleChange}
+            />
+            <br />
+            <br />
+            <label htmlFor="paddingInput">Padding: </label>
+            <input
+              type="number"
+              id="paddingInput"
+              value={padd}
+              onChange={handleChange}
+            />
+          </form>
+        
+      </div>
+      <Preview fontSize={fon + "px"} content={inp} padding={padd + "px"} />
     </div>
   );
 };
-
-
 export default App;
